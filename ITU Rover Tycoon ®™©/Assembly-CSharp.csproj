@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
      <Compile Include="Assets\Scripts\Managers\WindowManager.cs" />
      <Compile Include="Assets\Scripts\Managers\MembersManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\Input.cs" />
  <Reference Include="UnityEngine">
  <HintPath>D:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
