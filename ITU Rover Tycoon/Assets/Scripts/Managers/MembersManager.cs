@@ -1,27 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class MembersManager : MonoBehaviour
+namespace Managers
 {
-    // Start is called before the first frame update
-    void Start()
+    public class MembersManager : MonoBehaviour
     {
+        // Start is called before the first frame update
+        void Start()
+        {
         
-    }
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
+        // Update is called once per frame
+        void Update()
+        {
         
-    }
+        }
 
-    public static void abstr()
-    {
+        public static void abstr()
+        {
         
-    }
-    public enum MyEnum
-    {
-        abc = 3,
+        }
+        public enum MyEnum
+        {
+            abc = 3,
+        }
     }
 }

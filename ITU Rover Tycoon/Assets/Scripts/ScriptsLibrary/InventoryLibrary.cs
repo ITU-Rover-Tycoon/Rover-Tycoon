@@ -1,7 +1,6 @@
-using System.Globalization;
 using UnityEngine;
 
-namespace Library
+namespace ScriptsLibrary
 {
     public class InventoryLibrary : MonoBehaviour
     {
