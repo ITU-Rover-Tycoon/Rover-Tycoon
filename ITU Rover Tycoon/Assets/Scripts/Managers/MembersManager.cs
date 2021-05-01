@@ -1,9 +1,12 @@
+using ScriptsLibrary;
 using UnityEngine;
+using ScriptsLibrary;
 
 namespace Managers
 {
     public class MembersManager : MonoBehaviour
     {
+        public MemberLibrary.Member[] MembersList;
         // Start is called before the first frame update
         void Start()
         {
@@ -24,5 +27,7 @@ namespace Managers
         {
             abc = 3,
         }
+        
+
     }
 }

@@ -21,6 +21,7 @@ namespace Managers
             InventoryLibrary.Item.printItem();
             InventoryLibrary.Item a;
             DontDestroyOnLoad(this.gameObject);
+            DontDestroyOnLoad(this.gameObject);
         }
 
         // Update is called once per frame
