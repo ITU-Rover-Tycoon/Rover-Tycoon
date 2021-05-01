@@ -52,19 +52,19 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\GameplayMechanics\Market.cs" />
-     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\MarketManager.cs" />
      <Compile Include="Assets\Scripts\Managers\SceneManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\InventoryManager.cs" />
+     <Compile Include="Assets\Scripts\Library\InventoryLibrary.cs" />
      <Compile Include="Assets\Scripts\Managers\SaveLoadManager.cs" />
+     <Compile Include="Assets\Window.cs" />
+     <Compile Include="Assets\Scripts\Managers\RoverPartsManager.cs" />
+     <Compile Include="Assets\Scripts\GameplayMechanics\Market.cs" />
+     <Compile Include="Assets\Scripts\Managers\CalendarManager.cs" />
+     <Compile Include="Assets\Scripts\Library\MemberLibrary.cs" />
+     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
      <Compile Include="Assets\Scripts\Managers\WindowManager.cs" />
      <Compile Include="Assets\Scripts\Managers\MembersManager.cs" />
-     <Compile Include="Assets\Scripts\Managers\RoverPartsManager.cs" />
-     <Compile Include="Assets\Scripts\Managers\CalendarManager.cs" />
-     <Compile Include="Assets\Scripts\Managers\InventoryManager.cs" />
-     <Compile Include="Assets\Scripts\Library\MemberLibrary.cs" />
-     <Compile Include="Assets\Scripts\Managers\MarketManager.cs" />
-     <Compile Include="Assets\Scripts\Library\InventoryLibrary.cs" />
-     <Compile Include="Assets\Window.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
