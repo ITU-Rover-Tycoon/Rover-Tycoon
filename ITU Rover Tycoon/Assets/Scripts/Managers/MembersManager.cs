@@ -6,7 +6,7 @@ namespace Managers
 {
     public class MembersManager : MonoBehaviour
     {
-        public MemberLibrary.Member[] MembersList;
+        public MembersLibrary.Member[] MembersList;
         // Start is called before the first frame update
         void Start()
         {

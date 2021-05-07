@@ -4,7 +4,7 @@ namespace ScriptsLibrary
 {
 
 
-    public class MemberLibrary : MonoBehaviour
+    public class MembersLibrary : MonoBehaviour
     {
         public class Member
         {

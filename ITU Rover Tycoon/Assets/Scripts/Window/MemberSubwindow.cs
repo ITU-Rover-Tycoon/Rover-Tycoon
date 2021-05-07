@@ -10,7 +10,7 @@ public class MemberSubwindow : MonoBehaviour
     [SerializeField] private GameObject MemberDisplay;
     private GameObject[] _memberDisplayArray;
     private MembersManager _membersManager;
-    private MemberLibrary.Member[] _members;
+    private MembersLibrary.Member[] _members;
     private int membersLength;
 
     // Start is called before the first frame update
@@ -36,7 +36,7 @@ public class MemberSubwindow : MonoBehaviour
         
     }
     
-    GameObject CreateMemberDisplay(MemberLibrary.Member member)
+    GameObject CreateMemberDisplay(MembersLibrary.Member member)
     {
         var memDisBuffer = Instantiate(MemberDisplay);
         // burada oluşturulan memberın içi doldurulacak
