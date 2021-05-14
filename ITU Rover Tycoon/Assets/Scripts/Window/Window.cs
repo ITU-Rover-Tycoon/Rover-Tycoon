@@ -7,10 +7,11 @@ using UnityEngine;
 
 public class Window : MonoBehaviour
 {
-    private GameObject subwindow; 
+    [SerializeField] private GameObject subwindow;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        subwindow = gameObject; 
         // add yourself to WindowManager
         // if unsuccessful, throw exception
     }
@@ -23,7 +24,7 @@ public class Window : MonoBehaviour
     
     public void Exit()
     {
-        
+        subwindow.SetActive(false);
     }
 
     public void Info()
