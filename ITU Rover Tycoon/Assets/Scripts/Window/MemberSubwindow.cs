@@ -21,13 +21,13 @@ public class MemberSubwindow : MonoBehaviour
 
     private void getMembers()
     {
-        _members = _membersManager.MembersList;
+      /*  _members = _membersManager.MembersList;
         membersLength = _members.Length;
         
         for (int i = 0; i < membersLength; i++)
         {
             CreateMemberDisplay(_members[i]);
-        }
+        }*/
     }
 
     // Update is called once per frame
