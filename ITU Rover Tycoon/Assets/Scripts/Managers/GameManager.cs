@@ -4,40 +4,44 @@ using UnityEngine;
 using ScriptsLibrary;
 
 
-
 namespace Managers
 {
-    
-    
     public class GameManager : Singleton<GameManager>
     {
         public delegate void NextCycleHandler();
-        public static event NextCycleHandler NextCycle;
-        
         public delegate void PauseBeginHandler();
-        public static event PauseBeginHandler PauseBegin;
-        
         public delegate void PauseEndHandler();
-        public static event PauseEndHandler PauseEnd;
-
         public delegate void GameStartHandler();
-
-        public static event GameStartHandler GameStart;
+        
+        public static event NextCycleHandler NextCycleEvent;
+        public static event PauseBeginHandler PauseBeginEvent;
+        public static event PauseEndHandler PauseEndEvent;
+        public static event GameStartHandler GameStartEvent;
         
         void Awake()
         {
             DontDestroyOnLoad(this.gameObject);
         }
 
-
-
-
         private void GoToNextCycle()
         {
-            NextCycle?.Invoke();
+            NextCycleEvent?.Invoke();
+        }
+
+        private void PauseBegin()
+        {
+            PauseBeginEvent?.Invoke();
         }
         
-
-
+        private void PauseEnd()
+        {
+            PauseEndEvent?.Invoke();
+        }
+        
+        private void GameStart()
+        {
+            GameStartEvent?.Invoke();
+        }
+        
     }
 }
