@@ -8,26 +8,36 @@ using ScriptsLibrary;
 namespace Managers
 {
     
-    public class GameManager : MonoBehaviour
+    
+    public class GameManager : Singleton<GameManager>
     {
-        // Start is called before the first frame update
-        void Start()
+        public delegate void NextCycleHandler();
+        public static event NextCycleHandler NextCycle;
+        
+        public delegate void PauseBeginHandler();
+        public static event PauseBeginHandler PauseBegin;
+        
+        public delegate void PauseEndHandler();
+        public static event PauseEndHandler PauseEnd;
+
+        public delegate void GameStartHandler();
+
+        public static event GameStartHandler GameStart;
+        
+        void Awake()
         {
-            int c;
-            c = (int) MembersManager.MyEnum.abc;
-            
-            Debug.Log("printing c");
-            Debug.Log(c.ToString());
-            InventoryLibrary.Item.printItem();
-            InventoryLibrary.Item a;
-            DontDestroyOnLoad(this.gameObject);
             DontDestroyOnLoad(this.gameObject);
         }
 
-        // Update is called once per frame
-        void Update()
+
+
+
+        private void GoToNextCycle()
         {
-        
+            NextCycle?.Invoke();
         }
+        
+
+
     }
 }

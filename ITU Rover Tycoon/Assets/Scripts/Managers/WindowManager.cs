@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Managers
 {
-    public class WindowManager : MonoBehaviour
+    public class WindowManager : Singleton<WindowManager>
     {
         // Start is called before the first frame update
         void Start()
