@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Managers;
 using UnityEngine;
 
 
@@ -11,7 +12,7 @@ public class Window : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        subwindow = gameObject; 
+        subwindow = gameObject;
         // add yourself to WindowManager
         // if unsuccessful, throw exception
     }
@@ -25,6 +26,7 @@ public class Window : MonoBehaviour
     public void Exit()
     {
         subwindow.SetActive(false);
+        WindowManager.I.Pop(this);
     }
 
     public void Info()
@@ -34,6 +36,18 @@ public class Window : MonoBehaviour
 
     public void ToggleActivation()
     {
+
+        if (!subwindow.activeSelf)
+        {
+            WindowManager.I.CloseAllWindows();
+            WindowManager.I.Fill_windows_list(this);
+        }
+        else
+        {
+            //WindowManager.I.Pop(this);
+            Debug.Log("Fuck u");
+        }
+        
         subwindow.SetActive(!subwindow.activeSelf);
     }
 }

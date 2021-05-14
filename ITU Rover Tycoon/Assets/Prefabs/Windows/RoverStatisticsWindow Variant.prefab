@@ -1,48 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &294824775
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 294824776}
-  - component: {fileID: 294824777}
-  m_Layer: 0
-  m_Name: RoverStatistics
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &294824776
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294824775}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.54733, y: 7.5977516, z: 48.71005}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 391034816058330909}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294824777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294824775}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45bd78575871a3844839c2d6a6eed15d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &18731629298022265
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -94,14 +51,49 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2160308116010320634, guid: 8ca93d13822c6f743844641ac8d615c3, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2160308116010320634, guid: 8ca93d13822c6f743844641ac8d615c3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2160308116010320634, guid: 8ca93d13822c6f743844641ac8d615c3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2160308116010320634, guid: 8ca93d13822c6f743844641ac8d615c3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2160308116010320634, guid: 8ca93d13822c6f743844641ac8d615c3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2160308116010320634, guid: 8ca93d13822c6f743844641ac8d615c3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1678
+      objectReference: {fileID: 0}
+    - target: {fileID: 2160308116010320634, guid: 8ca93d13822c6f743844641ac8d615c3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 850
+      objectReference: {fileID: 0}
+    - target: {fileID: 2160308116010320634, guid: 8ca93d13822c6f743844641ac8d615c3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054964630330522180, guid: 8ca93d13822c6f743844641ac8d615c3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: db74f66bfbae59b48819b7691db10cbe, type: 3}
     - target: {fileID: 8742333113969230847, guid: 8ca93d13822c6f743844641ac8d615c3, type: 3}
       propertyPath: m_Name
       value: RoverStatisticsWindow
       objectReference: {fileID: 0}
+    - target: {fileID: 8742333113969230847, guid: 8ca93d13822c6f743844641ac8d615c3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ca93d13822c6f743844641ac8d615c3, type: 3}
---- !u!4 &391034816058330909 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 373711111602108516, guid: 8ca93d13822c6f743844641ac8d615c3, type: 3}
-  m_PrefabInstance: {fileID: 18731629298022265}
-  m_PrefabAsset: {fileID: 0}

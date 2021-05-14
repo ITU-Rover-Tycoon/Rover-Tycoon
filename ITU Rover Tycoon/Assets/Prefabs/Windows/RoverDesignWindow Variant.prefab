@@ -1,35 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2751065413892369337
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7358350927649578772}
-  m_Layer: 0
-  m_Name: RoverDesign
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7358350927649578772
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2751065413892369337}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.54733, y: 7.5977516, z: 48.71005}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8767457515741200230}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &8972283636988364546
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81,14 +51,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2160308116010320634, guid: 8ca93d13822c6f743844641ac8d615c3, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2160308116010320634, guid: 8ca93d13822c6f743844641ac8d615c3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2160308116010320634, guid: 8ca93d13822c6f743844641ac8d615c3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2160308116010320634, guid: 8ca93d13822c6f743844641ac8d615c3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2160308116010320634, guid: 8ca93d13822c6f743844641ac8d615c3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2160308116010320634, guid: 8ca93d13822c6f743844641ac8d615c3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1678
+      objectReference: {fileID: 0}
+    - target: {fileID: 2160308116010320634, guid: 8ca93d13822c6f743844641ac8d615c3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 850
+      objectReference: {fileID: 0}
+    - target: {fileID: 2160308116010320634, guid: 8ca93d13822c6f743844641ac8d615c3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8742333113969230847, guid: 8ca93d13822c6f743844641ac8d615c3, type: 3}
       propertyPath: m_Name
       value: RoverDesignWindow
       objectReference: {fileID: 0}
+    - target: {fileID: 8742333113969230847, guid: 8ca93d13822c6f743844641ac8d615c3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ca93d13822c6f743844641ac8d615c3, type: 3}
---- !u!4 &8767457515741200230 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 373711111602108516, guid: 8ca93d13822c6f743844641ac8d615c3, type: 3}
-  m_PrefabInstance: {fileID: 8972283636988364546}
-  m_PrefabAsset: {fileID: 0}

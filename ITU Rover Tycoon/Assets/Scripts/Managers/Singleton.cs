@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 
+namespace Managers
+{
+    
 [DisallowMultipleComponent]
 public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 {
@@ -12,4 +15,6 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
             return i;
         }
     }
+}
+
 }
