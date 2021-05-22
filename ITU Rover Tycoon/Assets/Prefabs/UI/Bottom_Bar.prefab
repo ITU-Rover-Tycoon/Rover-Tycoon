@@ -896,6 +896,7 @@ GameObject:
   - component: {fileID: 9020308574070384588}
   - component: {fileID: 9020308574070384589}
   - component: {fileID: 9020308574070384590}
+  - component: {fileID: 7777361170688545151}
   m_Layer: 5
   m_Name: Next_Button
   m_TagString: Untagged
@@ -1003,7 +1004,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9020308574070384589}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7777361170688545151}
+        m_TargetAssemblyTypeName: NextButton, Assembly-CSharp
+        m_MethodName: ButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7777361170688545151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9020308574070384576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 416ab13046e4d2d45bee1cb4e300b25f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9020308574190218926
 GameObject:
   m_ObjectHideFlags: 0
