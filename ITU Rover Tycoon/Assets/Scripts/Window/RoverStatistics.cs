@@ -1,18 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
 using UnityEngine;
 
 public class RoverStatistics : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameObject selectedPanel;
+    public static List<GameObject> panelslist = new List<GameObject>(); // Curretnly active windows
+
+    public static void Fill_panels_list(GameObject new_panel)
     {
-        
+        panelslist.Add(new_panel);
     }
 
-    // Update is called once per frame
-    void Update()
+    public static void closeAllPanels()
     {
-        
+        for (int a = 0; a < panelslist.Count; a++)
+        { 
+            panelslist[a].SetActive(false);
+        }
+        panelslist = new List<GameObject>();
+        Debug.Log(panelslist.Count);
     }
 }
