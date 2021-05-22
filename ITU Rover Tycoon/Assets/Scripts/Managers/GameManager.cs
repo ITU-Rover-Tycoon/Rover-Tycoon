@@ -32,7 +32,7 @@ namespace Managers
         private void NextCycleActions()
         {
             cycleIndex += 1;
-            Debug.Log("The current cycle index is" + cycleIndex);
+            //Debug.Log("The current cycle index is" + cycleIndex);
         }
     }
 }
