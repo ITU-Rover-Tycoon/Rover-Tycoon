@@ -1,47 +1,38 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using ScriptsLibrary;
 
-
 namespace Managers
 {
     public class GameManager : Singleton<GameManager>
     {
-        public delegate void NextCycleHandler();
-        public delegate void PauseBeginHandler();
-        public delegate void PauseEndHandler();
-        public delegate void GameStartHandler();
-        
-        public static event NextCycleHandler NextCycleEvent;
-        public static event PauseBeginHandler PauseBeginEvent;
-        public static event PauseEndHandler PauseEndEvent;
-        public static event GameStartHandler GameStartEvent;
-        
+        [SerializeField] private SceneLoader.Scenes startScenes;
+        [SerializeField] private bool loadStartScene;
+
+        public int cycleIndex = 0;
+
+        public EventManager events;
+
         void Awake()
         {
-            DontDestroyOnLoad(this.gameObject);
+            // DontDestroyOnLoad(this.gameObject);
         }
 
-        private void GoToNextCycle()
+        private void Start()
         {
-            NextCycleEvent?.Invoke();
+            if (loadStartScene && (startScenes != SceneLoader.Scenes.Core)) SceneLoader.Load(startScenes);
+            EventManager.NextCycleEvent += NextCycleActions;
+            events = GetComponent<EventManager>();
+            
         }
 
-        private void PauseBegin()
+
+        private void NextCycleActions()
         {
-            PauseBeginEvent?.Invoke();
+            cycleIndex += 1;
+            Debug.Log("The current cycle index is" + cycleIndex);
         }
-        
-        private void PauseEnd()
-        {
-            PauseEndEvent?.Invoke();
-        }
-        
-        private void GameStart()
-        {
-            GameStartEvent?.Invoke();
-        }
-        
     }
 }
