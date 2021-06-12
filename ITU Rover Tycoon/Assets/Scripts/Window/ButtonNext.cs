@@ -7,6 +7,11 @@ public class ButtonNext : MonoBehaviour
 {
     public void ButtonPressed()
     {
+        if (WindowManager.I.focusOverriden)
+        {
+            WindowManager.I.CloseAllWindows();
+            return;
+        }
         GameManager.I.events.TriggerNextCycle();
     }
 }

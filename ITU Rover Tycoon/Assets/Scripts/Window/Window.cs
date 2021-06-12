@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using Managers;
 using UnityEngine;
 
@@ -8,8 +9,7 @@ using UnityEngine;
 
 public class Window : MonoBehaviour
 {
-    [SerializeField] private GameObject subwindow;
-    // Start is called before the first frame update
+    [SerializeField] public GameObject subwindow;
     void Awake()
     {
         subwindow = gameObject;
@@ -17,16 +17,24 @@ public class Window : MonoBehaviour
         // if unsuccessful, throw exception
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void ToggleActivation()
     {
         
+        if (subwindow.activeSelf)
+        {
+            Exit();
+        }
+        else
+        {
+            Open();
+        }
     }
     
     public void Exit()
     {
         subwindow.SetActive(false);
-        WindowManager.I.Pop(this);
+        WindowManager.I.PopActiveWindow(this);
     }
 
     public void Info()
@@ -34,20 +42,10 @@ public class Window : MonoBehaviour
         
     }
 
-    public void ToggleActivation()
+    private void Open()
     {
-
-        if (!subwindow.activeSelf)
-        {
-            WindowManager.I.CloseAllWindows();
-            WindowManager.I.Fill_windows_list(this);
-        }
-        else
-        {
-            //WindowManager.I.Pop(this);
-            Debug.Log("Fuck u");
-        }
-        
-        subwindow.SetActive(!subwindow.activeSelf);
+        WindowManager.I.CloseAllWindows();
+        subwindow.SetActive(true);
+        WindowManager.I.AddActiveWindow(this);
     }
 }

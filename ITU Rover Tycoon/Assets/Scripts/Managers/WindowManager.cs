@@ -8,32 +8,36 @@ namespace Managers
 {
     public class WindowManager : Singleton<WindowManager>
     {
-        public List<Window> windows_list = new List<Window>(); // Curretnly active windows
-        
-        // Start is called before the first frame update
-        void Start()
-        {
-            
-        }
+        public List<Window> activeWindows = new List<Window>(); // Curretnly active windows
+        public bool focusOverriden = false;
 
-        public void Fill_windows_list(Window new_window)
+        
+        public void AddActiveWindow(Window new_window)
         {
-            windows_list.Add(new_window);
-            Debug.Log(windows_list.Count);
+            focusOverriden = true;
+            activeWindows.Add(new_window);
         }
-        public void Pop(Window new_window)
+        public void PopActiveWindow(Window new_window)
         {
-            windows_list.RemoveAt(windows_list.IndexOf(new_window));
-            Debug.Log(windows_list.Count);
+            // TODO;
+            // This should work the same way. try it and if this is better, change with this. Delete old.
+            // Reason: easier to read
+            // windows_list.Remove(new_window);
+            
+            activeWindows.RemoveAt(activeWindows.IndexOf(new_window));
+            focusOverriden = (activeWindows.Count != 0);
         }
 
         public void CloseAllWindows()
         {
-            for (int a = 0; a < windows_list.Count; a++)
+            //  Creating a new list so that we don't fiddle with the list during foreach.
+            List<Window>  activeWindowsBuffer = new List<Window>(activeWindows) ;
+            foreach (var window in activeWindowsBuffer)
             {
-                windows_list[a].gameObject.SetActive(false);
+                window.Exit();
             }
-            windows_list = new List<Window>(); // Clear bakilacak
+
+            focusOverriden = false;
         }
     }
 }
